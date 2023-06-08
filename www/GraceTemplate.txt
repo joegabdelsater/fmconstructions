@@ -1,0 +1,19 @@
+1. Questions:
+
+About us page?
+Projects divided into completed current and future? or in project description status is mentioned?
+News with how many pictures?
+
+
+2. Database tables:
+
+homepage_slider:id,image,description
+about_us:id,image,title,description,year,year_text
+types:id,name
+projects:id,title,description, type,status,cover_image,type_id
+project_images:id,project_id,image
+news:id, title, description,cover_image,date
+news_images:id,news_id,image
+contact_us: id, area_text,address,email,number,working_hours_1, working_hours_2,longitude,latitude
+contact_us_form:id,name, email, subject, message
+social_media:id,slug,link

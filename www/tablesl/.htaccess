@@ -1,0 +1,136 @@
+RewriteEngine on
+RewriteRule ^list/([A-Za-z0-9_\.-]+).html?$ list.php?table=$1 [QSA,L]
+RewriteRule ^generate/([A-Za-z0-9_\.-]+).html?$ generate.php?table=$1 [QSA,L]
+
+RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Bot\ mailto:craftbot@yahoo.com [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^ChinaClaw [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Custo [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^DISCo [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Download\ Demon [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^eCatch [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EirGrabber [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EmailSiphon [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EmailWolf [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Express\ WebPictures [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^ExtractorPro [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EyeNetIE [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^FlashGet [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^GetRight [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^GetWeb! [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Go!Zilla [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Go-Ahead-Got-It [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^GrabNet [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Grafula [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^HMView [OR] 
+RewriteCond %{HTTP_USER_AGENT} HTTrack [NC,OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Image\ Stripper [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Image\ Sucker [OR] 
+RewriteCond %{HTTP_USER_AGENT} Indy\ Library [NC,OR] 
+RewriteCond %{HTTP_USER_AGENT} ^InterGET [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Internet\ Ninja [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^JetCar [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^JOC\ Web\ Spider [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^larbin [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^LeechFTP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Mass\ Downloader [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^MIDown\ tool [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Mister\ PiX [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Navroad [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NearSite [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NetAnts [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NetSpider [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Net\ Vampire [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NetZIP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Octopus [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Offline\ Explorer [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Offline\ Navigator [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^PageGrabber [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Papa\ Foto [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^pavuk [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^pcBrowser [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^RealDownload [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^ReGet [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SiteSnagger [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SmartDownload [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SuperBot [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SuperHTTP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Surfbot [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^tAkeOut [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Teleport\ Pro [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^VoidEYE [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Web\ Image\ Collector [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Web\ Sucker [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebAuto [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebCopier [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebFetch [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebGo\ IS [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebLeacher [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebReaper [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebSauger [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Website\ eXtractor [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Website\ Quester [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebStripper [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebWhacker [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebZIP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Wget [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Widow [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WWWOFFLE [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Zeus 
+RewriteRule ^.* - [F,L]
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+Options -Indexes
+#LimitRequestBody 2524288
+ServerSignature Off
+ RewriteCond %{REQUEST_METHOD} ^(HEAD|TRACE|DELETE|TRACK) [NC,OR]
+ RewriteCond %{THE_REQUEST} (\\r|\\n|%0A|%0D) [NC,OR]
+ 
+ RewriteCond %{HTTP_USER_AGENT} ^$ [OR]
+ RewriteCond %{HTTP_USER_AGENT} ^(java|curl|wget) [NC,OR]
+ RewriteCond %{HTTP_USER_AGENT} (winhttp|HTTrack|clshttp|archiver|loader|email|harvest|extract|grab|miner) [NC,OR]
+ RewriteCond %{HTTP_USER_AGENT} (libwww-perl|curl|wget|python|nikto|scan) [NC,OR]
+ RewriteCond %{HTTP_USER_AGENT} (<|>|’|%0A|%0D|%27|%3C|%3E|%00) [NC,OR]
+ 
+ #Block mySQL injects
+ RewriteCond %{QUERY_STRING} (;|<|>|’|”|\)|%0A|%0D|%22|%27|%3C|%3E|%00).*(/\*|union|select|insert|cast|set|declare|drop|update|md5|benchmark) [NC,OR]
+ 
+ RewriteCond %{QUERY_STRING} \.\./\.\. [OR]
+ 
+ RewriteCond %{QUERY_STRING} (localhost|loopback|127\.0\.0\.1) [NC,OR]
+ RewriteCond %{QUERY_STRING} \.[a-z0-9] [NC,OR]
+ RewriteCond %{QUERY_STRING} (<|>|’|%0A|%0D|%27|%3C|%3E|%00) [NC]
+RewriteCond %{QUERY_STRING} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC,OR]
+#####
+RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]
+# Block out any script trying to base64_encode crap to send via URL
+RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
+# Block out any script that includes a <script> tag in URL
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+# Block out any script trying to set a PHP GLOBALS variable via URL
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+# Block out any script trying to modify a _REQUEST variable via URL
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+# Send all blocked request to homepage with 403 Forbidden error!
+RewriteRule ^(.*)$ index.php [F,L]
+#
+<IfModule mod_deflate.c>
+    #The following line is enough for .js and .css
+    AddOutputFilter DEFLATE js css
+
+    #The following line also enables compression by file content type, for the following list of Content-Type:s
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml
+
+    #The following lines are to avoid bugs with some browsers
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html 
+	<FilesMatch "\.(js|css|xml|gz)$">
+    Header append Vary Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
+ErrorDocument 404 /error.html 
