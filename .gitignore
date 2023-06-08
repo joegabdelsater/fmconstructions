@@ -1,2 +1,6 @@
 /fmc_production.sql
 /www/images
+/nginx
+/Dockerfile
+/docker-compose.yml
+/Dockerfile.nginx

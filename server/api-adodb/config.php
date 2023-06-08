@@ -20,10 +20,10 @@
         error_reporting(E_ERROR);
 
         // Database Constants
-        defined('DB_SERVER') ? null : define("DB_SERVER", "mysql");
-        defined('DB_USER')   ? null : define("DB_USER", "your_user");
-        defined('DB_PASS')   ? null : define("DB_PASS", 'your_password');
-        defined('DB_NAME')   ? null : define('DB_NAME', "your_database");
+        defined('DB_SERVER') ? null : define("DB_SERVER", "localhost");
+        defined('DB_USER')   ? null : define("DB_USER", "fmconstructions");
+        defined('DB_PASS')   ? null : define("DB_PASS", 'ikkcmf32cz46ciuf3inj');
+        defined('DB_NAME')   ? null : define('DB_NAME', "fmconstructions");
         defined('EMAIL_FROM')   ? null : define('EMAIL_FROM','Site Name');
 
         defined('SITE_ROOT')    ? null : define('SITE_ROOT', str_replace("\\", "/", dirname(dirname(dirname(__FILE__)))) );
@@ -60,10 +60,10 @@
 
     // Database Constants
 
-        defined('DB_SERVER') ? null : define("DB_SERVER", "localhost");
-        defined('DB_USER')   ? null : define("DB_USER", "root");
-        defined('DB_PASS')   ? null : define("DB_PASS", '@Bd3l5@t3r');
-        defined('DB_NAME')   ? null : define('DB_NAME', 'fmc_production');
+       defined('DB_SERVER') ? null : define("DB_SERVER", "localhost");
+        defined('DB_USER')   ? null : define("DB_USER", "fmconstructions");
+        defined('DB_PASS')   ? null : define("DB_PASS", 'ikkcmf32cz46ciuf3inj');
+        defined('DB_NAME')   ? null : define('DB_NAME', "fmconstructions");
         defined('EMAIL_FROM')   ? null : define('EMAIL_FROM','Site Name');
 
          defined('SITE_ROOT')    ? null : define('SITE_ROOT', dirname(dirname(dirname(__FILE__))) );
